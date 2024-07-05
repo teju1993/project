@@ -1,0 +1,59 @@
+<div class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" *ngIf="popularproducts">
+        <div class="carousel-inner">
+            <div class="carousel-item active" *ngFor="let item of popularproducts">
+                <a routerLink="/details/{{item.id}}">
+                    <img class="img1 " src="{{item.image}}">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.description}}</p>
+
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="product-list">
+    <div class="product-item-wrapper">
+        <h2>Trendy Product</h2>
+        <div class="row">
+            <div class="col-sm-3" *ngFor="let item of trendyProducts">
+                <div class="product-image">
+                    <img src="{{item.image}}">
+
+                </div>
+                <div class="product-details">
+                    <h6 class="name-head">Colour:{{item.colour | titlecase}}</h6>
+                    <div class="product-price">
+                        <h6>Price:{{item.price}}</h6>
+                    </div>
+
+                </div>
+                <div class="product-info">
+                    <a routerLink="/details/{{item.id}}">View Cart</a>
+                    <a routerLink="/cart-page">Add To Cart</a>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>

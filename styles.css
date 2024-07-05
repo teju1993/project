@@ -1,0 +1,41 @@
+.body {
+    font-family: sans-serif;
+    width: 5%;
+    height: 5%;
+}
+
+
+
+.common-form {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-bottom: 20px;
+    border: 1px solid blueviolet;
+
+    height: 35px;
+    padding-left: 10px;
+    color: violet;
+}
+
+.form-button {
+    color: blue;
+    height: 35px;
+    text-align: center;
+    padding-left: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.invalid-input {
+    color: red;
+    margin-top: -20px;
+    font-size: 12px;
+    text-align: left;
+}

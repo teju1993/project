@@ -1,0 +1,20 @@
+.signup,
+.login {
+    text-align: center;
+    color: blueviolet;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.toggle-auth {
+    cursor: pointer;
+    padding-top: 14px;
+    color: blueviolet;
+    font-size: 16px;
+    text-align: left;
+}
+
+.autherror {
+    color: red;
+    font-size: 17;
+}

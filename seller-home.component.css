@@ -1,0 +1,22 @@
+table {
+    text-align: left;
+    color: blueviolet;
+    border-collapse: collapse;
+}
+
+table td,
+table th {
+    border: 1px solid blueviolet;
+    padding: 10px;
+    min-height: 100px;
+
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.edit-icon {
+    margin-left: 20px;
+}

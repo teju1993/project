@@ -1,0 +1,33 @@
+<div *ngIf="!showLogin" class="user">
+    <h4>User SignUp</h4>
+    <form class="common-form" #usersignup="ngForm" (ngSubmit)="SignUp(usersignup.value)">
+        <input type="text" placeholder="Enter User Name" ngModel name="Name" class="form-input" #Name="ngModel"
+            required>
+        <p class="invalid-input"><span *ngIf="Name.invalid && Name.touched">Please Enter Name</span></p>
+        <input type="text" placeholder="Enter User Email" ngModel name="Email" class="form-input" #Email="ngModel"
+            required>
+        <p class="invalid-input"><span *ngIf="Email.invalid && Email.touched">Please Enter Email</span></p>
+        <input type="password" placeholder="Enter User password" ngModel name="Password" class="form-input"
+            #Password="ngModel" required minlength="5" maxlength="10">
+        <p class="invalid-input"><span *ngIf="Password.invalid && Password.touched">Please Enter password</span></p>
+        <button [disabled]="usersignup.invalid" class="">SignUp</button>
+        <p>Already Have Account? <a class="toggle-auth" (click)="openLogin()">Click Here</a></p>
+    </form>
+
+</div>
+<div *ngIf="showLogin" class="user-login">
+    <h4>User Login</h4>
+    <p class="autherror">{{authError}}</p>
+    <form class="common-form" #userlogin="ngForm" (ngSubmit)="login(userlogin.value)">
+
+        <input type="text" placeholder="Enter User Email" ngModel name="Email" class="form-input" #Email="ngModel"
+            required>
+        <p class="invalid-input"><span *ngIf="Email.invalid && Email.touched">Please Enter Email</span></p>
+        <input type="password" placeholder="Enter User password" ngModel name="Password" class="form-input"
+            #Password="ngModel" required>
+        <p class="invalid-input"><span *ngIf="Password.invalid && Password.touched">Please Enter password</span></p>
+        <button [disabled]="userlogin.invalid" class="">Login</button>
+        <p> To Create Account? <a class="toggle-auth" (click)="opensignUp()">Click here</a></p>
+    </form>
+
+</div>

@@ -1,0 +1,21 @@
+.order {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.row {
+    margin-top: 10px;
+    padding: 10px;
+    border-block-end: 1px solid;
+}
+
+.menu {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+}
